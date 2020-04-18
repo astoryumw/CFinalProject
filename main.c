@@ -150,16 +150,25 @@ int main(){
 	}
 	display();
 
+	int num;
+	printf("Enter a number (1-5) to see if workout is in the hashtable.\n");
+	scanf("%d",&num);
+	printf("It will be deleted if it exists!\n");
 
+	item = search(num);
+	// printf(item);
 
+	if(item != NULL) {
+       		printf("Element found: %d\n", item->exercise);
+		delete(item);
+		printf("It's deleted. Goodbye!");
+        } else {
+        	printf("Element not found\n");
+        }
 
 
 
 	return 0;
-
-
-
-
 
 
 
